@@ -13,6 +13,22 @@ No new ore, ingot, dust, or raw-material items are ever registered — GTCEu res
 
 Scaffolded from the official [GregTech-Addon-Template](https://github.com/GregTechCEu/GregTech-Addon-Template) (LGPLv3), which uses NeoForge's `legacyforge` ModDev tooling (not classic ForgeGradle) even though the target is Forge, not NeoForge.
 
+## Status and intent
+
+Everything below is **done, built, and verified working** (see "Testing" for how): 7 alloy recipes converted to GTCEu Alloy Smelter recipes with the base mod's vanilla recipe deleted; all 28 metals registered as GT materials with a full tool line; item reuse tags for all 28; a dedicated `mythical_gt` creative tab; lang entries for the 20 new materials; tool tint colors matched to each metal's real texture. Pushed to `main` at every step — `git log` is the accurate history of what changed and why, prefer it over asking the user to re-explain past decisions.
+
+Explicit product decisions already made and settled (don't re-litigate without being asked):
+- This is a **separate addon**, not a fork of Mythic Metals CE Port. It must never duplicate that mod's items/blocks — only tag existing ones in.
+- All 28 metals get the full GT tool line, not a subset.
+- Alloy smelter recipe EU/duration values are placeholder-reasonable (LV tier, 32 EU/t, duration scaled loosely to ingredient count) — explicitly *not* balanced against real GT progression. Revisit if the user asks for balance/tuning specifically.
+- Tool material colors must be derived from the actual `mythicmetals` texture PNGs (see the Python snippet under "Colors must come from the real texture"), never guessed from the metal's name or lore — this was gotten wrong once (Runite) and corrected.
+
+Known gaps / plausible next asks, not started:
+- No ore-processing chain (crusher/washer/thermal centrifuge/etc. recipes) for these metals — only the alloy smelter recipes and tools exist so far.
+- No machine casings, multiblocks, or anything beyond materials/tools/the 7 alloy recipes.
+- EU/duration values on the alloy recipes are unbalanced placeholders (see above).
+- `gtceu_version`/`ldlib_version`/etc. in `gradle.properties` are pinned to what the addon template shipped (GTCEu 7.4.0) rather than the latest GTCEu release (7.5.3 was latest as of this writing) — deliberately not bumped mid-session to avoid an unverified dependency-version combo; bumping is safe to attempt but re-verify per "Testing" before trusting it.
+
 ## Commands
 
 - `./gradlew build` — compile and produce the mod jar (`build/libs/mythicalgt-<version>.jar`)
