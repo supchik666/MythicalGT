@@ -33,6 +33,14 @@ public final class MythicalMaterials {
 
     private MythicalMaterials() {}
 
+    /**
+     * Every material this addon touches (both the 20 newly registered ones and the 8 reused
+     * GTCEu materials), populated by {@link #init()}/{@link #modify()}. Used by
+     * {@link com.mythicalgt.MythicalCreativeTabs} to list every tool this addon adds without
+     * needing its own separate bookkeeping of which materials/tool types actually got an item.
+     */
+    public static final java.util.List<Material> ALL_MATERIALS = new java.util.ArrayList<>();
+
     private record Stats(float harvestSpeed, float attackDamage, int durability, int harvestLevel,
                          int enchantability, int color, boolean gem) {
 
@@ -101,6 +109,7 @@ public final class MythicalMaterials {
     public static void modify() {
         REUSED_MATERIALS.forEach((name, supplier) -> {
             Material material = supplier.get();
+            ALL_MATERIALS.add(material);
             if (material.hasProperty(PropertyKey.TOOL)) {
                 // Already has a tool line from GTCEu itself - don't overwrite it.
                 return;
@@ -120,12 +129,13 @@ public final class MythicalMaterials {
         } else {
             builder.ingot(stats.harvestLevel());
         }
-        builder.color(stats.color())
+        Material material = builder.color(stats.color())
                 .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_ROD,
                         MaterialFlags.GENERATE_LONG_ROD, MaterialFlags.GENERATE_BOLT_SCREW,
                         MaterialFlags.GENERATE_GEAR)
                 .toolStats(buildToolProperty(stats))
                 .buildAndRegister();
+        ALL_MATERIALS.add(material);
     }
 
     private static ToolProperty buildToolProperty(Stats stats) {

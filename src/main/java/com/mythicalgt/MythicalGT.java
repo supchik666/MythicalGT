@@ -31,6 +31,8 @@ public class MythicalGT {
         modEventBus.addListener(this::addMaterials);
         modEventBus.addListener(this::modifyMaterials);
 
+        MythicalCreativeTabs.register(modEventBus);
+
         REGISTRATE.registerRegistrate();
     }
 
