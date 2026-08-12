@@ -8,8 +8,6 @@ import com.gregtechceu.gtceu.common.data.GTMaterials;
 
 import com.mythicalgt.MythicalGT;
 
-import java.util.function.Consumer;
-
 /**
  * Wires every Mythic Metals CE Port metal into GTCEu's tool-generation system.
  * <p>
@@ -36,14 +34,15 @@ public final class MythicalMaterials {
     private MythicalMaterials() {}
 
     private record Stats(float harvestSpeed, float attackDamage, int durability, int harvestLevel,
-                          int enchantability, int color, boolean gem) {
+                         int enchantability, int color, boolean gem) {
+
         private static Stats ingot(float harvestSpeed, float attackDamage, int durability, int harvestLevel,
-                                    int enchantability, int color) {
+                                   int enchantability, int color) {
             return new Stats(harvestSpeed, attackDamage, durability, harvestLevel, enchantability, color, false);
         }
 
         private static Stats gem(float harvestSpeed, float attackDamage, int durability, int harvestLevel,
-                                  int enchantability, int color) {
+                                 int enchantability, int color) {
             return new Stats(harvestSpeed, attackDamage, durability, harvestLevel, enchantability, color, true);
         }
     }
