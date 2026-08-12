@@ -1,0 +1,16 @@
+{
+  "type": "gtceu:alloy_smelter",
+  "inputs": {
+    "item": [
+      { "count": 1, "ingredient": { "item": "mythicmetals:starrite" } },
+      { "count": 1, "ingredient": { "item": "mythicmetals:platinum_ingot" } }
+    ],
+    "eu": [ 32 ]
+  },
+  "outputs": {
+    "item": [
+      { "count": 1, "ingredient": { "item": "mythicmetals:star_platinum" } }
+    ]
+  },
+  "duration": 140
+}

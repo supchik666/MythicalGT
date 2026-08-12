@@ -1,0 +1,16 @@
+{
+  "type": "gtceu:alloy_smelter",
+  "inputs": {
+    "item": [
+      { "count": 1, "ingredient": { "item": "mythicmetals:quadrillum_ingot" } },
+      { "count": 1, "ingredient": { "item": "mythicmetals:manganese_ingot" } }
+    ],
+    "eu": [ 32 ]
+  },
+  "outputs": {
+    "item": [
+      { "count": 2, "ingredient": { "item": "mythicmetals:durasteel_ingot" } }
+    ]
+  },
+  "duration": 120
+}

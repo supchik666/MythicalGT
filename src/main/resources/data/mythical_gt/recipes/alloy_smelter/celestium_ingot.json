@@ -1,0 +1,19 @@
+{
+  "type": "gtceu:alloy_smelter",
+  "inputs": {
+    "item": [
+      { "count": 1, "ingredient": { "item": "mythicmetals:starrite" } },
+      { "count": 1, "ingredient": { "item": "mythicmetals:platinum_ingot" } },
+      { "count": 1, "ingredient": { "item": "mythicmetals:carmot_ingot" } },
+      { "count": 1, "ingredient": { "item": "mythicmetals:kyber_ingot" } },
+      { "count": 1, "ingredient": { "item": "mythicmetals:unobtainium" } }
+    ],
+    "eu": [ 32 ]
+  },
+  "outputs": {
+    "item": [
+      { "count": 1, "ingredient": { "item": "mythicmetals:celestium_ingot" } }
+    ]
+  },
+  "duration": 200
+}
