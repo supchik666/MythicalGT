@@ -2,14 +2,14 @@
   "type": "gtceu:alloy_smelter",
   "inputs": {
     "item": [
-      { "count": 2, "ingredient": { "item": "minecraft:copper_ingot" } },
-      { "count": 1, "ingredient": { "item": "mythicmetals:tin_ingot" } }
+      { "content": { "type": "gtceu:sized", "count": 2, "ingredient": { "item": "minecraft:copper_ingot" } } },
+      { "content": { "type": "gtceu:sized", "count": 1, "ingredient": { "item": "mythicmetals:tin_ingot" } } }
     ],
-    "eu": [ 32 ]
+    "eu": [ { "content": 32 } ]
   },
   "outputs": {
     "item": [
-      { "count": 3, "ingredient": { "item": "mythicmetals:bronze_ingot" } }
+      { "content": { "type": "gtceu:sized", "count": 3, "ingredient": { "item": "mythicmetals:bronze_ingot" } } }
     ]
   },
   "duration": 100

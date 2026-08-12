@@ -59,7 +59,7 @@ public final class MythicalMaterials {
             java.util.Map.entry("kyber", Stats.ingot(7.0F, 2.5F, 889, 3, 20, 0x66CCFF)),
             java.util.Map.entry("metallurgium", Stats.ingot(15.0F, 8.0F, 3000, 5, 30, 0x4B0082)),
             java.util.Map.entry("midas_gold", Stats.ingot(8.0F, 3.0F, 600, 2, 22, 0xFFD700)),
-            java.util.Map.entry("morkite", Stats.ingot(6.0F, 2.5F, 400, 2, 10, 0x2E8B8B)),
+            java.util.Map.entry("morkite", Stats.gem(6.0F, 2.5F, 400, 2, 10, 0x2E8B8B)),
             java.util.Map.entry("mythril", Stats.ingot(14.3F, 3.0F, 1564, 4, 22, 0x6699CC)),
             java.util.Map.entry("orichalcum", Stats.ingot(6.0F, 4.0F, 2048, 4, 16, 0xCC7722)),
             java.util.Map.entry("prometheum", Stats.ingot(6.0F, 4.0F, 1472, 3, 15, 0xFF4500)),

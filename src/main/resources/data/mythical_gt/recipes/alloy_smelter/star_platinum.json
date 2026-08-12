@@ -2,14 +2,14 @@
   "type": "gtceu:alloy_smelter",
   "inputs": {
     "item": [
-      { "count": 1, "ingredient": { "item": "mythicmetals:starrite" } },
-      { "count": 1, "ingredient": { "item": "mythicmetals:platinum_ingot" } }
+      { "content": { "type": "gtceu:sized", "count": 1, "ingredient": { "item": "mythicmetals:starrite" } } },
+      { "content": { "type": "gtceu:sized", "count": 1, "ingredient": { "item": "mythicmetals:platinum_ingot" } } }
     ],
-    "eu": [ 32 ]
+    "eu": [ { "content": 32 } ]
   },
   "outputs": {
     "item": [
-      { "count": 1, "ingredient": { "item": "mythicmetals:star_platinum" } }
+      { "content": { "type": "gtceu:sized", "count": 1, "ingredient": { "item": "mythicmetals:star_platinum" } } }
     ]
   },
   "duration": 140
